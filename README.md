@@ -122,7 +122,7 @@ export default function Component2() {
 ```
 
 ## Examples
-- [The complete light turn on/off example using react](https://github.com/moh12594/xstate-store/example)
+- [The complete light turn on/off example using react](https://github.com/moh12594/xstate-store/tree/main/example)
 
 ## What's next ?
 
