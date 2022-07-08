@@ -27,7 +27,7 @@ To create a new machine instance, you could use `createInstance` method that use
 ```js
 createInstance(
   instanceId: string // it's the unique id that will define the instance and helps us accessing it through the application
-  instanceId: MachineDefinition // it's the machine definition that we pass to `createMachine` in xstate
+  config: MachineDefinition // it's the machine definition that we pass to `createMachine` in xstate
   options?: MachineOptions // optional: the options that would be passed to the xstate `createMachine` function
 )
 ```
@@ -120,6 +120,9 @@ export default function Component2() {
   )
 }
 ```
+
+## Examples
+- [The complete light turn on/off example using react](https://github.com/moh12594/xstate-store/example)
 
 ## What's next ?
 

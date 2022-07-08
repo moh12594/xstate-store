@@ -1,0 +1,1 @@
+export const LIGHT_INSTANCE_ID = '_LIGHT_INSTANCE_ID_'
