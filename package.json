@@ -6,8 +6,20 @@
   "author": "Axel Mohamed Sadat <axel.sadat1995@gmail.com>",
   "license": "MIT",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moh12594/xstate-store"
+  },
+  "keywords": [
+    "javascript",
+    "xstate",
+    "state management",
+    "state machines",
+    "react"
+  ],
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prepare": "yarn build"
   },
   "peerDependencies": {
     "@xstate/react": "^3.0.0",
