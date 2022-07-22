@@ -106,7 +106,6 @@ The hook will return an object with all asked data passed as an array or string 
 
 For example, in our previous instance we have a value `usageNumber` in our context. we can retrieve and use it like this:
 
-
 ```js
 export default function Component2() {
   const data = useDataFromContext(LIGHT_INSTANCE_ID, 'usageNumber')
@@ -116,6 +115,22 @@ export default function Component2() {
   return (
     <p>
       Number of light usage: <strong>{data.usageNumber}</strong>
+    </p>
+  )
+}
+```
+
+Not passing a second argument to `useDataFromContext` or passing an empty array will return the whole context to you so you can use it directly like the example below:
+
+```js
+export default function Component2() {
+  const context = useDataFromContext(LIGHT_INSTANCE_ID, [])
+  // same as doing like this:
+  // const data = useDataFromContext(LIGHT_INSTANCE_ID)
+
+  return (
+    <p>
+      Number of light usage: <strong>{context.usageNumber}</strong>
     </p>
   )
 }

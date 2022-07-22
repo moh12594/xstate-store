@@ -56,7 +56,7 @@ function useInstance(
   return xStateReact.useActor(CREATED_SERVICES[instanceId], getSnapshot) as [EmittedFrom<Actor>, Actor['send']]
 }
 
-function useDataFromContext(instanceId: string, dataKeys: string | string[]): any {
+function useDataFromContext(instanceId: string, dataKeys: string | Array<string> | undefined): any {
   if (!CREATED_SERVICES[instanceId]) {
     throw new Error(`The service with id: ${instanceId} doesn't exist`)
   }
@@ -65,6 +65,10 @@ function useDataFromContext(instanceId: string, dataKeys: string | string[]): an
     CREATED_SERVICES[instanceId],
     (state: Actor extends Subscribable<infer Emitted> ? Emitted : never): any => state.context
   )
+
+  if (!dataKeys || dataKeys.length === 0) {
+    return context
+  }
 
   const computedKeys = Array.isArray(dataKeys) ? [...dataKeys] : [dataKeys]
   const values = {}
