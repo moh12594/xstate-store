@@ -1,0 +1,28 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "moh12594",
+      "name": "Axel Mohamed SADAT",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22661810?v=4",
+      "profile": "https://github.com/moh12594",
+      "contributions": [
+        "code",
+        "infra",
+        "test",
+        "maintenance",
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "xstate-store",
+  "projectOwner": "moh12594",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
