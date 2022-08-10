@@ -1,4 +1,7 @@
 [![npm version](https://badge.fury.io/js/xstate-store.svg)](https://badge.fury.io/js/xstate-store)
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 [](coverage/lcov-report/sort-arrow-sprite.png)
 # A declarative state container built on top of xState
 
@@ -182,3 +185,23 @@ The library can cover a lot of use cases and the most simple ones. But there's s
 - [ ] Handle spawned machines
 
 And other awesome stuffs.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/moh12594"><img src="https://avatars.githubusercontent.com/u/22661810?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Axel Mohamed SADAT</b></sub></a><br /><a href="https://github.com/moh12594/xstate-store/commits?author=moh12594" title="Code">💻</a> <a href="#infra-moh12594" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/moh12594/xstate-store/commits?author=moh12594" title="Tests">⚠️</a> <a href="#maintenance-moh12594" title="Maintenance">🚧</a> <a href="https://github.com/moh12594/xstate-store/commits?author=moh12594" title="Documentation">📖</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
