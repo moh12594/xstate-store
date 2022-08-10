@@ -4,6 +4,6 @@
 tsconfig.json
 jest.setup.js
 jest.config.ts
-/tests
+/test
 /coverage
 .eslintignore

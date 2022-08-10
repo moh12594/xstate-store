@@ -1,6 +1,6 @@
 {
   "name": "xstate-store",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A library built on top of xstate, that allows you to access your machines/services through your react application",
   "main": "lib/index.js",
   "author": "Axel Mohamed Sadat <axel.sadat1995@gmail.com>",
