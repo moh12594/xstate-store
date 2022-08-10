@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1660141691711" clover="3.2.0">
+  <project timestamp="1660141691711" name="All files">
+    <metrics statements="40" coveredstatements="40" conditionals="18" coveredconditionals="17" methods="7" coveredmethods="7" elements="65" coveredelements="64" complexity="0" loc="40" ncloc="40" packages="1" files="1" classes="1"/>
+    <file name="index.ts" path="/Users/axelsadat/Desktop/code/xstate-store/src/index.ts">
+      <metrics statements="40" coveredstatements="40" conditionals="18" coveredconditionals="17" methods="7" coveredmethods="7"/>
+      <line num="1" count="5" type="stmt"/>
+      <line num="2" count="5" type="stmt"/>
+      <line num="19" count="5" type="stmt"/>
+      <line num="24" count="11" type="cond" truecount="0" falsecount="1"/>
+      <line num="26" count="11" type="cond" truecount="1" falsecount="0"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="29" count="10" type="stmt"/>
+      <line num="30" count="10" type="stmt"/>
+      <line num="31" count="10" type="stmt"/>
+      <line num="33" count="10" type="stmt"/>
+      <line num="34" count="10" type="stmt"/>
+      <line num="37" count="5" type="stmt"/>
+      <line num="38" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="39" count="5" type="stmt"/>
+      <line num="41" count="1" type="stmt"/>
+      <line num="43" count="5" type="stmt"/>
+      <line num="47" count="3" type="cond" truecount="1" falsecount="0"/>
+      <line num="48" count="2" type="stmt"/>
+      <line num="50" count="1" type="stmt"/>
+      <line num="57" count="10" type="cond" truecount="1" falsecount="0"/>
+      <line num="58" count="1" type="stmt"/>
+      <line num="61" count="9" type="stmt"/>
+      <line num="65" count="5" type="cond" truecount="1" falsecount="0"/>
+      <line num="66" count="1" type="stmt"/>
+      <line num="69" count="4" type="stmt"/>
+      <line num="71" count="4" type="stmt"/>
+      <line num="74" count="4" type="cond" truecount="3" falsecount="0"/>
+      <line num="75" count="2" type="stmt"/>
+      <line num="78" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="79" count="2" type="stmt"/>
+      <line num="80" count="2" type="stmt"/>
+      <line num="81" count="3" type="cond" truecount="6" falsecount="0"/>
+      <line num="83" count="1" type="stmt"/>
+      <line num="87" count="2" type="stmt"/>
+      <line num="91" count="2" type="stmt"/>
+      <line num="95" count="5" type="stmt"/>
+      <line num="96" count="5" type="stmt"/>
+      <line num="97" count="5" type="stmt"/>
+      <line num="98" count="5" type="stmt"/>
+      <line num="99" count="5" type="stmt"/>
+    </file>
+  </project>
+</coverage>

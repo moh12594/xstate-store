@@ -34,9 +34,14 @@ function createInstance<TContext, TServiceMap extends ServiceMap = ServiceMap, T
   return instance as any
 }
 
-const stopInstance = (instanceId: string): any | undefined => (CREATED_SERVICES[instanceId]
-  ? CREATED_SERVICES[instanceId].stop()
-  : null)
+const stopInstance = (instanceId: string): any | undefined => {
+  if (CREATED_SERVICES[instanceId]) {
+    CREATED_SERVICES[instanceId].stop()
+  } else {
+    return null
+  }
+  return delete CREATED_SERVICES[instanceId]
+}
 
 function sendToInstance(instanceId: string, event: EventObject, payload?) {
   if (!CREATED_SERVICES[instanceId]) {
@@ -56,7 +61,7 @@ function useInstance(
   return xStateReact.useActor(CREATED_SERVICES[instanceId], getSnapshot) as [EmittedFrom<Actor>, Actor['send']]
 }
 
-function useDataFromContext(instanceId: string, dataKeys: string | Array<string> | undefined): any {
+function useDataFromContext(instanceId: string, dataKeys?: string | Array<string> | undefined): any {
   if (!CREATED_SERVICES[instanceId]) {
     throw new Error(`The service with id: ${instanceId} doesn't exist`)
   }
@@ -76,7 +81,7 @@ function useDataFromContext(instanceId: string, dataKeys: string | Array<string>
     if (!context[key] && context[key] !== null && context[key] !== 0 && context[key] !== false) {
       // eslint-disable-next-line no-console
       console.warn(
-        `Warning: the key ${key} doesn't exist on the instance ${CREATED_SERVICES[instanceId]}`
+        `Warning: the key ${key} doesn't exist on the instance ${instanceId}`
       )
     } else {
       values[key] = context[key]

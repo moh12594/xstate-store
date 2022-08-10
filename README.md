@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/xstate-store.svg)](https://badge.fury.io/js/xstate-store)
+[](coverage/lcov-report/sort-arrow-sprite.png)
 # A declarative state container built on top of xState
 
 xState-store is a library built on top of xstate, that allows you to access your machines/services through your **React** application and simplify sharing the same instance/actor between your different components.
@@ -136,6 +138,37 @@ export default function Component2() {
 }
 ```
 
+### Making actors communicating
+
+One of the challenges we are all facing using xState is how to make multiple actors communicating between them if they don't have any hierarchical relationship. `xstate-store` helps you facing this challenge using the 
+[receptionnist pattern](https://doc.akka.io/docs/akka/current/typed/actor-discovery.html).
+
+For example, you can use the `sendToInstance` function as an action from another service in order to send an event to another actor using its id (reference).
+
+The solution is inspired from the [RFC](https://github.com/statelyai/rfcs/pull/5/files) that the xState team is working on.
+
+```js
+const FIRST_LIGHT_INSTANCE_ID = '_FIRST_LIGHT_INSTANCE_ID_'
+
+createInstance(LIGHT_INSTANCE_ID, {
+  // machine definition here
+})
+
+const SECOND_LIGHT_INSTANCE_ID = '_SECOND_LIGHT_INSTANCE_ID_'
+createInstance(SECOND_LIGHT_INSTANCE_ID, {
+  // machine definition here and other stuffs
+  states: {
+    someState: {
+      on: {
+        EVENT: {
+          actions: sendToInstance(FIRST_LIGHT_INSTANCE_ID, { type: 'TOGGLE' })
+        }
+      }
+    }
+  }
+})
+```
+
 ## Examples
 - [The complete light turn on/off example using react](https://github.com/moh12594/xstate-store/tree/main/example)
 
@@ -145,7 +178,7 @@ The library can cover a lot of use cases and the most simple ones. But there's s
 
 - [x] useInstance
 - [x] useDataFromContext
-- [ ] Add tests to the library
+- [x] Add tests to the library
 - [ ] Handle spawned machines
 
 And other awesome stuffs.
