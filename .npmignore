@@ -2,3 +2,8 @@
 /src
 .eslintrc.js
 tsconfig.json
+jest.setup.js
+jest.config.ts
+/tests
+/coverage
+.eslintignore
