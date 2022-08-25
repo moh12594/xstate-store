@@ -10,6 +10,7 @@ lib-cov
 node_modules
 
 # Other
+.idea
 .DS_Store
 dist/
 lib/
