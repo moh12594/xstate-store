@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "build": "rollup -c",
-    "prepare": "yarn build",
+    "prepare": "npm run build",
     "test": "jest",
     "coverage": "jest --coverage"
   },
